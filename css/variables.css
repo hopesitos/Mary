@@ -1,0 +1,29 @@
+@font-face {
+  font-family: "Utendo";
+  src: local("Utendo Regular"), local("Utendo-Regular"),
+       url("../assets/fonts/Utendo-Regular.woff2") format("woff2"),
+       url("../assets/fonts/Utendo-Regular.otf") format("opentype"),
+       url("../assets/fonts/Utendo-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --bg: #050507;
+  --grid-line: #14143b;
+  --grid-size: 83px;
+
+  --text: #ffffff;
+  --muted: #9b9b9f;
+
+  --btn-top: #3d3d3f;
+  --btn-bottom: #1a1a1c;
+  --btn-border: #8d8d92;
+
+  --font: "Utendo", "Segoe UI", system-ui, -apple-system, sans-serif;
+
+  --pad-x: clamp(1.5rem, 11vw, 11.5rem);
+  --nav-h: 5.5rem;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+}

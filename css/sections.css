@@ -1,0 +1,165 @@
+/* ---------- Estructura de vistas ---------- */
+.view {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 100svh;
+  padding: calc(var(--nav-h) + 2rem) var(--pad-x) 3rem;
+  overflow-x: clip;
+}
+.view[hidden] { display: none; }
+.view > .container-fluid { width: 100%; }
+
+/* ---------- HOME ---------- */
+.home-text { max-width: 36rem; }
+
+.dc-stack {
+  position: relative;
+  width: min(100%, 34rem);
+  aspect-ratio: 5 / 6;
+  margin-inline: auto;
+}
+
+.dc-card {
+  position: absolute;
+  margin: 0;
+  filter: drop-shadow(0 18px 30px rgba(0, 0, 0, 0.55));
+}
+.dc-hover { border-radius: 1.75rem; }
+.dc-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 1.75rem;
+}
+
+/* Inclinaciones con la propiedad "rotate" para no chocar con las animaciones */
+.dc-rules { left: 10%; top: 0;   width: 56%; rotate: -10deg; z-index: 1; }
+.dc-roles { left: 0;   top: 56%; width: 58%; rotate: -15deg; z-index: 2; }
+.dc-chat  { left: 34%; top: 25%; width: 66%; rotate: 15deg;  z-index: 3; }
+
+/* ---------- SOCIALS ---------- */
+#socials { justify-content: center; }
+
+.social-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.social-wrap .lead-muted { max-width: 26rem; margin: 2rem 0 0; }
+
+.social-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2.2rem;
+  margin: 3.5rem 0 0;
+  padding: 0;
+}
+
+.social-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 6.5rem;
+  height: 6.5rem;
+  font-size: 3.1rem;
+  color: var(--text);
+  text-decoration: none;
+  background: radial-gradient(circle at 50% 28%, #3a3a3d, #151517 72%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  transition: border-color 0.2s;
+}
+.social-btn:hover { color: var(--text); border-color: rgba(255, 255, 255, 0.35); }
+
+/* ---------- CHARACTER ---------- */
+.char-text {
+  position: relative;
+  z-index: 2;
+  max-width: 34rem;
+}
+
+.char-facts {
+  margin: 3rem 0;
+  padding: 0;
+  font-size: clamp(1.15rem, 3.4vw, 1.45rem);
+  line-height: 1.14;
+  color: var(--muted);
+}
+
+.char-art {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  width: min(58vw, 52rem);
+  height: calc(100svh - 7rem);
+  pointer-events: none;
+}
+
+.mary {
+  position: absolute;
+  right: 6%;
+  bottom: -3%;
+  height: 92%;
+  width: auto;
+  max-width: 78%;
+  object-fit: contain;
+  object-position: right bottom;
+}
+
+.polaroid {
+  position: absolute;
+  z-index: 2;
+  margin: 0;
+  padding: 0.25rem;
+  background: #ececf0;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.5);
+}
+.polaroid img { display: block; width: 100%; height: auto; }
+
+/* Cinta adhesiva en esquinas opuestas */
+.polaroid::before,
+.polaroid::after {
+  content: "";
+  position: absolute;
+  width: 2.1rem;
+  height: 0.85rem;
+  background: rgba(222, 196, 150, 0.88);
+}
+.polaroid::before { top: -0.35rem; left: -0.9rem; rotate: -38deg; }
+.polaroid::after  { right: -0.9rem; bottom: -0.35rem; rotate: -38deg; }
+
+.polaroid-1 { left: 47%; top: 3%; width: 14.5%; rotate: -2deg; }
+.polaroid-2 { left: 69%; top: 1%; width: 20%;   rotate: 12deg; }
+
+/* ---------- Tablet y móvil ---------- */
+@media (max-width: 991.98px) {
+  .view { padding-inline: 1.5rem; }
+
+  .home-text { max-width: none; }
+  .dc-stack { width: min(100%, 26rem); }
+
+  #character { display: block; }
+  .char-text { max-width: none; }
+
+  .char-art {
+    position: relative;
+    width: min(100%, 32rem);
+    height: min(105vw, 34rem);
+    margin: 2.5rem auto 0;
+    overflow: hidden;
+  }
+  .mary { right: 2%; height: 88%; max-width: 80%; }
+  .polaroid-1 { left: 40%; top: 2%; width: 17%; }
+  .polaroid-2 { left: 66%; top: 1%; width: 24%; }
+}
+
+@media (max-width: 575.98px) {
+  .view { padding-top: calc(var(--nav-h) + 1rem); }
+  .social-btn { width: 5rem; height: 5rem; font-size: 2.4rem; }
+  .social-list { gap: 1.4rem; }
+}
