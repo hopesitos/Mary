@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mary Schmidt | Home</title>
+  <meta name="description" content="Página personal de Mary Schmidt: comunidad de Discord, redes sociales y personaje.">
+  <meta name="theme-color" content="#050507">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/sections.css">
+  <style>
+       @font-face {
+        font-family: 'LetraAgencia';
+        src: url('assets/fonts/Utendo-Regular.ttf');
+       }
+    </style>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="site-nav">
+    <nav aria-label="Principal">
+      <ul class="nav-inner list-unstyled" id="nav">
+        <li class="nav-pill" id="nav-pill" aria-hidden="true"></li>
+        <li><a class="nav-link-ui" href="#home" data-view="home">Home</a></li>
+        <li><a class="nav-link-ui" href="#socials" data-view="socials">Socials</a></li>
+        <li><a class="nav-link-ui" href="#character" data-view="character">Character</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="contenido">
+
+    <!-- HOME -->
+    <section class="view" id="home" aria-labelledby="home-title">
+      <div class="container-fluid px-0">
+        <div class="row align-items-center gy-5">
+          <div class="col-12 col-lg-5 home-text">
+            <h1 id="home-title" class="display-title" tabindex="-1">Discord<br>Server</h1>
+            <p class="lead-muted">Adéntrate al sótano de Mary Schmidt y forma parte de su comunidad de Discord. Aquí podrás conocer nuevas personas y ser parte del multifandom.</p>
+            <a class="btn-ui" href="https://discord.gg/aN2YZ6SKb" target="_blank" rel="noopener noreferrer">¡Únete!</a>
+          </div>
+
+          <div class="col-12 col-lg-7">
+            <div class="dc-stack">
+              <figure class="dc-card dc-rules">
+                <div class="dc-hover"><img src="assets/img/discord-rules.jpeg" alt="Canal de reglas, chat y roles del servidor de Mary Schmidt" width="560" height="560"></div>
+              </figure>
+              <figure class="dc-card dc-roles">
+                <div class="dc-hover"><img src="assets/img/discord-roles.jpeg" alt="Mensaje para elegir el color de rol con emojis de corazones" width="560" height="560"></div>
+              </figure>
+              <figure class="dc-card dc-chat">
+                <div class="dc-hover"><img src="assets/img/discord-chat.jpeg" alt="Conversación de miembros en el chat del servidor" width="560" height="560"></div>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOCIALS -->
+    <section class="view" id="socials" aria-labelledby="socials-title" hidden>
+      <div class="social-wrap">
+        <h1 id="socials-title" class="display-title" tabindex="-1">Social<br>Media</h1>
+        <p class="lead-muted">¡Conoce mis demás redes sociales y ve a seguirme para futuros contenidos!</p>
+        <ul class="social-list list-unstyled">
+          <li>
+            <a class="social-btn" href="https://youtube.com/@cmdlit" target="_blank" rel="noopener noreferrer" aria-label="YouTube de cmdlit">
+              <i class="bi bi-youtube" aria-hidden="true"></i>
+            </a>
+          </li>
+          <li>
+            <a class="social-btn" href="https://www.tiktok.com/@cmdlit" target="_blank" rel="noopener noreferrer" aria-label="TikTok de cmdlit">
+              <i class="bi bi-tiktok" aria-hidden="true"></i>
+            </a>
+          </li>
+          <li>
+            <a class="social-btn" href="https://discord.gg/aN2YZ6SKb" target="_blank" rel="noopener noreferrer" aria-label="Servidor de Discord">
+              <i class="bi bi-discord" aria-hidden="true"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CHARACTER -->
+    <section class="view" id="character" aria-labelledby="character-title" hidden>
+      <div class="char-text">
+        <h1 id="character-title" class="display-title" tabindex="-1">Character</h1>
+        <ul class="char-facts list-unstyled">
+          <li>Nombre: Mary Schmidt.</li>
+          <li>Género: Femenino.</li>
+          <li>Origen: Five Nights at Candy's.</li>
+          <li>Creador: Emil Macko.</li>
+          <li>Personalidad e historia: Es la protagonista de Five Nights at Candy's y Five Nights at Candy's 3.</li>
+        </ul>
+        <!-- TODO: definir a dónde lleva "Más info" (enlace o ventana). -->
+        <button class="btn-ui" type="button" id="more-info">Más info</button>
+      </div>
+
+      <div class="char-art">
+        <img class="mary" src="assets/img/mary.jpeg" alt="Ilustración de Mary Schmidt con bufanda verde a rayas y coletas negras" width="900" height="1000">
+        <figure class="polaroid polaroid-1"><img src="assets/img/foto-1.jpeg" alt="Ilustración decorativa en tonos azules" width="300" height="300"></figure>
+        <figure class="polaroid polaroid-2"><img src="assets/img/foto-2.jpeg" alt="Ilustración decorativa en tonos morados y naranjas" width="300" height="360"></figure>
+      </div>
+    </section>
+
+  </main>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
